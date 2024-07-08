@@ -5,9 +5,6 @@ heroImage: "https://generated.vusercontent.net/placeholder.svg"
 tags: ["Astro","Dev"]
 ---
 
-# Mi primer post
----
----
 
 # Titulo Principal
 
