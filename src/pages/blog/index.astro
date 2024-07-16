@@ -1,27 +1,17 @@
 ---
 import Article from "@/components/Article.astro";
-import Layout from "@/layouts/Layout.astro";
+import ArticleList from "@/layouts/ArticleList.astro";
 import { getCollection } from "astro:content";
 
 const posts = (await getCollection("blog")).sort(
   (a,b)=>b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
   );
 
-console.log(posts);
+
 ---
-
-<Layout title="blog">
-    <!-- npx astro sync -->
-    <div class="max-w-content-size mx-auto w-full">
-        <section class="mt-6 w-full">
-          <ul class="space-y-8">
-
-          {posts.map((post)=>(
-            <Article {...post.data} slug={post.slug}></Article>
-          ))}
-
-          </ul>
-        </section>
-      </div>
-      
-</Layout>
+<ArticleList>
+  {posts.map((post)=>(
+    <Article {...post.data} slug={post.slug}></Article>
+  ))}
+</ArticleList>
+ 

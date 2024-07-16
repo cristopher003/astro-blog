@@ -1,7 +1,7 @@
 ---
 title: "Mi secont post"
 pubDate: "jul 03 2022"
-heroImage: "https://generated.vusercontent.net/placeholder.svg"
+heroImage: "/assets/img002.png"
 tags: ["Astro","Dev"]
 ---
 
